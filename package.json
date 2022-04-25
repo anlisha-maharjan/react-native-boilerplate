@@ -10,6 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.10",
+    "axios": "^0.26.1",
+    "formik": "^2.2.9",
     "react": "17.0.2",
     "react-native": "0.68.1"
   },
