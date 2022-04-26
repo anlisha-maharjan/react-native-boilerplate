@@ -1,5 +1,5 @@
 ## About The App
-Zpol for Android & iOS built using React Native.
+Zpol for Android & iOS built using React Native featuring Authentication Flow with React Navigation v6.
 
 ## Requirements
 
