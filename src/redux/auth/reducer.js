@@ -7,12 +7,13 @@ import {
   LOGOUT_ERROR,
   RESET_AUTH,
 } from '../actions';
+import TokenService from '../../services/token.service';
 
 const INIT_STATE = {
   username: null,
   password: null,
   history: null,
-  token: null,
+  token: TokenService.getToken(),
   success: false,
   message: null,
   loading: false,

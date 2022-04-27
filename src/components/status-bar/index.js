@@ -1,18 +1,20 @@
 import React from 'react';
-import {View, StatusBar} from 'react-native';
+import {StatusBar, View, Platform} from 'react-native';
 
 const Bar = () => {
   return (
     <View
       style={{
-        backgroundColor: 'rgba(18, 63, 104, 1)',
-        height: 0,
+        height: Platform.OS === 'ios' ? '3.5%' : 0,
+        backgroundColor: '#1C3496',
       }}>
       <StatusBar
         barStyle="default"
         backgroundColor="rgba(18, 63, 104, 1)"
         translucent={false}
         networkActivityIndicatorVisible={true}
+        animated={true}
+        showHideTransition="slide"
       />
     </View>
   );
