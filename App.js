@@ -7,10 +7,21 @@
  */
 
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {Provider} from 'react-redux';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import Bar from './src/components/status-bar';
+import Navigation from './src/navigations';
+import store from '@/redux/store';
 
 const App = () => {
-  return <SafeAreaView />;
+  return (
+    <Provider store={store}>
+      <Bar />
+      <SafeAreaProvider>
+        <Navigation />
+      </SafeAreaProvider>
+    </Provider>
+  );
 };
 
 export default App;
