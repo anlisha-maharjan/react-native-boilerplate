@@ -13,32 +13,48 @@ const Stack = createNativeStackNavigator();
 function Root() {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Dashboard"
       tabBarOptions={{
-        activeBackgroundColor: '#123F68',
-        inactiveBackgroundColor: '#123F68',
-        tabStyle: {paddingBottom: 5, paddingTop: 5},
-        style: {backgroundColor: '#123F68'},
-        labelStyle: {
-          color: '#fff',
-          fontFamily: 'SourceSansPro-Regular',
-          fontSize: 12,
+        activeBackgroundColor: '#F6F9FC',
+        activeTintColor: '#1C3496',
+        inactiveBackgroundColor: '#ffffff',
+        inactiveTintColor: '#BCC5D3',
+        showLabel: false,
+        style: {
+          maxHeight: '75px',
+          height: '10%',
+          paddingTop: '3%',
+          paddingBottom: '3%',
+          paddingLeft: '6%',
+          paddingRight: '6%',
+          borderTopWidth: '1px',
+          borderTopColor: '#E2E8ED',
+          shadowOpacity: '0',
+          elevation: '0',
+          backgroundColor: '#fff',
+        },
+        tabStyle: {
+          marginLeft: '3.2%',
+          marginRight: '3.2%',
+          borderRadius: '5px',
         },
       }}
       backBehavior={'initialRoute'}>
       <Tab.Screen
         options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: () => null,
+          tabBarIcon: ({color}) => (
+            <MeIcon name="home" color={color} size={22} />
+          ),
         }}
-        name="Home"
+        name="Dashboard"
         component={Dashboard}
       />
 
       <Tab.Screen
         options={{
-          tabBarLabel: 'Setting',
-          tabBarIcon: () => null,
+          tabBarIcon: ({color}) => (
+            <MeIcon name="setting" color={color} size={22} />
+          ),
         }}
         name="Setting"
         component={Setting}

@@ -17,6 +17,9 @@ cd zpol
 # Dependencies  
 npm install  
 
+# Copy .env.example to .env
+cp .env.example .env
+
 # iOS only  
 cd ios && pod install && cd ..  
 
