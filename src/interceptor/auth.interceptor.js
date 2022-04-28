@@ -1,7 +1,8 @@
 import axios from 'axios';
+import {APIURL} from 'react-native-dotenv';
 
 const request = axios.create({
-  baseURL: '',
+  baseURL: APIURL,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
