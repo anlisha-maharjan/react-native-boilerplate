@@ -11,7 +11,7 @@ import {Provider} from 'react-redux';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import Bar from './src/components/status-bar';
 import Navigation from './src/navigations';
-import store from '@/redux/store';
+import store from './src/reduxs/store';
 
 const App = () => {
   return (

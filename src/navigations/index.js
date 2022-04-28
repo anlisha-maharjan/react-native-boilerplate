@@ -14,7 +14,7 @@ function Root() {
   return (
     <Tab.Navigator
       initialRouteName="Dashboard"
-      tabBarOptions={{
+      screenOptions={{
         activeBackgroundColor: '#F6F9FC',
         activeTintColor: '#1C3496',
         inactiveBackgroundColor: '#ffffff',
@@ -63,15 +63,14 @@ const Navigation = props => {
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator headerMode="none">
-        {props.token == null ? (
-          <>
-            <Stack.Screen name="Login" component={Login} />
-          </>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        {props.token === null ? (
+          <Stack.Screen name="Login" component={Login} />
         ) : (
-          <>
-            <Stack.Screen name="Root" component={Root} />
-          </>
+          <Stack.Screen name="Root" component={Root} />
         )}
       </Stack.Navigator>
     </NavigationContainer>

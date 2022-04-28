@@ -24,7 +24,7 @@ const InputField = props => {
           paddingRight: '0',
           paddingBottom: '0',
           fontFamily: 'ProximaNova-Regular',
-          fontSize: '14px',
+          fontSize: 14,
           fontWeight: 'normal',
         },
       ]}
@@ -36,7 +36,7 @@ const InputField = props => {
       errorMessage={hasError && errors[name]}
       errorStyle={
         hasError
-          ? {margin: 0, marginTop: '3px', fontSize: '10px'}
+          ? {margin: 0, marginTop: '3px', fontSize: 10}
           : {display: 'none'}
       }
       {...inputProps}

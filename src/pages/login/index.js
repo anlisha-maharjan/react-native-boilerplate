@@ -44,7 +44,7 @@ const Login = props => {
           validationSchema={schema}
           onSubmit={onLogin}
           style={{width: '100%'}}>
-          {props => (
+          {() => (
             <>
               <Field
                 component={InputField}
