@@ -42,9 +42,7 @@ function Root() {
       backBehavior={'initialRoute'}>
       <Tab.Screen
         options={{
-          tabBarIcon: ({color}) => (
-            <MeIcon name="home" color={color} size={22} />
-          ),
+          tabBarIcon: null,
         }}
         name="Dashboard"
         component={Dashboard}
@@ -52,9 +50,7 @@ function Root() {
 
       <Tab.Screen
         options={{
-          tabBarIcon: ({color}) => (
-            <MeIcon name="setting" color={color} size={22} />
-          ),
+          tabBarIcon: null,
         }}
         name="Setting"
         component={Setting}
