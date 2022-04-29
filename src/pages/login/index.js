@@ -26,16 +26,14 @@ const Login = props => {
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       style={{flex: 1}}>
       <View
-        flexView="1"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        background="#1C3496">
-        <Text
-          color="#ffffff"
-          varient="medium"
-          size="28"
-          style={{marginBottom: '16%'}}>
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#1C3496',
+        }}>
+        <Text style={{color: '#ffffff', marginBottom: '16%', fontSize: 28}}>
           Sign In
         </Text>
 
@@ -44,7 +42,7 @@ const Login = props => {
           validationSchema={schema}
           onSubmit={onLogin}
           style={{width: '100%'}}>
-          {() => (
+          {props => (
             <>
               <Field
                 component={InputField}
@@ -53,6 +51,7 @@ const Login = props => {
                 keyboardType="email-address"
                 autoCapitalize="none"
               />
+
               <Field
                 component={InputField}
                 name="password"
@@ -71,8 +70,13 @@ const Login = props => {
               />
 
               <BtnSubmit
-                containerStyle={{width: '100%', marginTop: '18%'}}
-                title="Sign In"
+                title="Login"
+                titleStyle={{color: '#FFFFFF', fontSize: 14}}
+                buttonStyle={{
+                  height: 38,
+                  margin: 'auto',
+                  backgroundColor: '#1C3496',
+                }}
                 handleSubmit={props.handleSubmit}
                 loading={props.loading}
                 loadingProps={{color: '#5BCADD'}}

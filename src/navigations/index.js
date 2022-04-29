@@ -43,6 +43,8 @@ function Root() {
       backBehavior={'initialRoute'}>
       <Tab.Screen
         options={{
+          title: '',
+          headerStyle: {height: 0},
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),
@@ -53,6 +55,8 @@ function Root() {
 
       <Tab.Screen
         options={{
+          title: '',
+          headerStyle: {height: 0},
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="bell" color={color} size={size} />
           ),
@@ -72,7 +76,7 @@ const Navigation = props => {
         screenOptions={{
           headerShown: false,
         }}>
-        {props.token === null ? (
+        {props.token !== null ? (
           <Stack.Screen name="Login" component={Login} />
         ) : (
           <Stack.Screen name="Root" component={Root} />

@@ -12,33 +12,13 @@ const InputField = props => {
   return (
     <Input
       value={value}
-      inputContainerStyle={[
-        {
-          paddingTop: '18px',
-          borderColor: 'rgba($color: #000000, $alpha: 0.05);',
-        },
-      ]}
-      inputStyle={[
-        {
-          paddingLeft: '0',
-          paddingRight: '0',
-          paddingBottom: '0',
-          fontFamily: 'ProximaNova-Regular',
-          fontSize: 14,
-          fontWeight: 'normal',
-        },
-      ]}
       onChangeText={text => onChange(name)(text)}
       onBlur={() => {
         setFieldTouched(name);
         onBlur(name);
       }}
       errorMessage={hasError && errors[name]}
-      errorStyle={
-        hasError
-          ? {margin: 0, marginTop: '3px', fontSize: 10}
-          : {display: 'none'}
-      }
+      errorStyle={hasError ? {fontSize: 14} : {display: 'none'}}
       {...inputProps}
     />
   );

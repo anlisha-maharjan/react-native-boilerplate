@@ -1,5 +1,5 @@
 ## About The App
-Zpol for Android & iOS built using React Native has basic Authentication Flow using React Navigation v6.
+Zpol for Android built using React Native includes basic authentication flow using React Navigation v6 and Redux.
 
 ## Requirements
 
@@ -19,12 +19,6 @@ npm install
 
 # Copy .env.example to .env
 cp .env.example .env
-
-# iOS only  
-cd ios && pod install && cd ..  
-
-# Run iOS  
-npx react-native run-ios  
 
 # Run Android  
 npx react-native run-android  
