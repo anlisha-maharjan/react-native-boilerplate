@@ -29,6 +29,18 @@ npx react-native run-ios
 # Run Android  
 npx react-native run-android  
 
+# Run metro server
+npx react-native start
+
+```
+
+## Build
+
+```bash
+
+# Android  
+npx react-native run-android --variant=release
+
 ```
 
 ## Note

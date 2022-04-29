@@ -4,16 +4,14 @@ const tokenService = (function () {
   async function _setToken(token) {
     try {
       await AsyncStorage.setItem('token', JSON.stringify(token));
-    } catch (e) {
-      // saving error
-    }
+    } catch (e) {}
   }
 
-  const _getToken = async () => {
+  async function _getToken(token) {
     try {
       return await AsyncStorage.getItem('token');
     } catch (error) {}
-  };
+  }
 
   async function _clearToken() {
     await AsyncStorage.removeItem('token');

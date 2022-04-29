@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {connect} from 'react-redux';
 import Dashboard from '../pages/dashboard';
 import Setting from '../pages/setting';
@@ -15,34 +16,36 @@ function Root() {
     <Tab.Navigator
       initialRouteName="Dashboard"
       screenOptions={{
-        activeBackgroundColor: '#F6F9FC',
-        activeTintColor: '#1C3496',
-        inactiveBackgroundColor: '#ffffff',
-        inactiveTintColor: '#BCC5D3',
-        showLabel: false,
-        style: {
-          maxHeight: '75px',
+        tabBarActiveBackgroundColor: '#F6F9FC',
+        tabBarActiveTintColor: '#1C3496',
+        tabBarInactiveBackgroundColor: '#ffffff',
+        tabBarInactiveTintColor: '#BCC5D3',
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          maxHeight: 75,
           height: '10%',
           paddingTop: '3%',
           paddingBottom: '3%',
           paddingLeft: '6%',
           paddingRight: '6%',
-          borderTopWidth: '1px',
+          borderTopWidth: 1,
           borderTopColor: '#E2E8ED',
-          shadowOpacity: '0',
-          elevation: '0',
+          shadowOpacity: 0,
+          elevation: 0,
           backgroundColor: '#fff',
         },
-        tabStyle: {
+        tabBarItemStyle: {
           marginLeft: '3.2%',
           marginRight: '3.2%',
-          borderRadius: '5px',
+          borderRadius: 5,
         },
       }}
       backBehavior={'initialRoute'}>
       <Tab.Screen
         options={{
-          tabBarIcon: null,
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
         }}
         name="Dashboard"
         component={Dashboard}
@@ -50,7 +53,9 @@ function Root() {
 
       <Tab.Screen
         options={{
-          tabBarIcon: null,
+          tabBarIcon: ({color, size}) => (
+            <MaterialCommunityIcons name="bell" color={color} size={size} />
+          ),
         }}
         name="Setting"
         component={Setting}
