@@ -1,12 +1,31 @@
 ## About The App
-Zpol for Android built using React Native includes basic authentication flow using React Navigation v6 and Redux.
+The project is a React Native boilerplate (for Android) that provides an architecture optimized for building solid cross-platform mobile applications with embedded authentication flow to help you kickstart new app.
 
+When starting new apps I found myself repeatedly setting up my project with same packages over and over again so I decided to automate this process.
+
+While this mostly consists of how I organize my projects but can be easily extended to suit any workflow.
+
+Feel free to leave a ⭐ as motivation if this was useful to you 😊
 ## Requirements
 
 - Node 12 or newer
 - Java SE Development Kit (JDK) version 8 or newer
 - Android Studio
 
+## Context
+```bash
+- React Native (0.68.1) 
+- React (17.0.2)
+- Packages:
+    - Redux
+    - React Redux
+    - Redux-Saga
+    - React Navigation
+    - React Native Elements
+    - React Native Vector Icons
+    - Formik
+    - Axios
+```
 ## Development
 
 ```bash
@@ -19,6 +38,9 @@ npm install
 
 # Copy .env.example to .env
 cp .env.example .env
+
+# Add APIURL in .env
+APIURL=
 
 # Run Android  
 npx react-native run-android  
