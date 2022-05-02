@@ -1,18 +1,18 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ImageBackground} from 'react-native';
 
-const Dashboard = props => {
+const Dashboard = () => {
   return (
     <View
       style={{
-        width: '100%',
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF',
       }}>
-      <Text style={{color: '#1C3496', fontSize: 36}}>Welcome Anlisha!</Text>
+      <ImageBackground
+        source={require('../../assets/images/1.jpg')}
+        resizeMode="cover"
+        style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{color: '#1C3496', fontSize: 36}}>Welcome Anlisha!</Text>
+      </ImageBackground>
     </View>
   );
 };
