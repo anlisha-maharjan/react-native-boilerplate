@@ -5,7 +5,7 @@ const Bar = () => {
   return (
     <View
       style={{
-        height: Platform.OS === 'ios' ? '3.5%' : 0,
+        height: 0,
         backgroundColor: '#1C3496',
       }}>
       <StatusBar

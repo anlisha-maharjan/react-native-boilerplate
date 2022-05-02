@@ -15,9 +15,10 @@ import Navigation from './src/navigations';
 import store from './src/reduxs/store';
 
 const App = () => {
-  useEffect = () => {
+  useEffect(() => {
     SplashScreen.hide();
-  };
+  }, []);
+
   return (
     <Provider store={store}>
       <Bar />
