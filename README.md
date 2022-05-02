@@ -32,8 +32,13 @@ npx react-native start
 
 ```bash
 
-# Android  
+# Generate Android Release Build APK  
 npx react-native run-android --variant=release
+
+#Generate Android Release AAB
+#Generate AAB path - android/app/build/outputs/bundle/release/app-release.aab
+cd android
+./gradlew bundleRelease
 
 ```
 
