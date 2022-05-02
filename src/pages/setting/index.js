@@ -1,6 +1,6 @@
 import React from 'react';
-import {View} from 'react-native';
-import {Button} from 'react-native-elements';
+import {View, ImageBackground, Text} from 'react-native';
+import {Button, Avatar} from 'react-native-elements';
 import {logout} from '../../reduxs/actions';
 import {connect} from 'react-redux';
 
@@ -11,27 +11,60 @@ const Setting = props => {
   return (
     <View
       style={{
-        width: '100%',
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF',
       }}>
-      <View style={[{width: '50%', overflow: 'hidden'}]}>
-        <Button
-          onPress={onLogout}
-          title={'Log out'}
-          loading={props.loading}
-          loadingProps={{color: '#FFFFFF'}}
-          titleStyle={{fontSize: 18}}
-          buttonStyle={{
-            backgroundColor: '#B60F0F',
-            borderRadius: 10,
-            padding: 10,
-          }}
-        />
-      </View>
+      <ImageBackground
+        source={require('../../assets/images/1.jpg')}
+        resizeMode="cover"
+        style={{flex: 1}}>
+        <View style={{padding: 30, marginTop: '36%'}}>
+          <View
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Avatar
+              size={125}
+              source={require('../../assets/images/photo-placeholder.png')}
+              containerStyle={{
+                borderRadius: 5,
+                borderWidth: 3,
+                borderColor: '#85F0D3',
+              }}></Avatar>
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: 25,
+              }}>
+              <Text
+                style={{
+                  marginBottom: 8,
+                  fontSize: 36,
+                  fontWeight: 'bold',
+                  color: '#1C3496',
+                }}>
+                Anlisha Maharjan
+              </Text>
+              <Text style={{marginBottom: 8, fontSize: 16, color: '#1C3496'}}>
+                anlishamaharjan@gmail.com
+              </Text>
+              <Button
+                onPress={onLogout}
+                title={'Log out'}
+                type="clear"
+                loading={props.loading}
+                loadingProps={{color: '#FF0000'}}
+                titleStyle={{fontSize: 20, color: '#FF0000'}}
+              />
+            </View>
+          </View>
+        </View>
+      </ImageBackground>
     </View>
   );
 };

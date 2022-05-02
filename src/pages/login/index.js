@@ -1,5 +1,5 @@
 import React from 'react';
-import {KeyboardAvoidingView, Platform} from 'react-native';
+import {KeyboardAvoidingView} from 'react-native';
 import {Formik, Field} from 'formik';
 import {connect} from 'react-redux';
 import * as Yup from 'yup';
