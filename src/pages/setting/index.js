@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, ImageBackground, Text} from 'react-native';
 import {Button, Avatar} from 'react-native-elements';
-import {logout} from '../../reduxs/actions';
 import {connect} from 'react-redux';
+import {logout} from '@myapp/reduxs/actions';
 
 const Setting = props => {
   const onLogout = () => {
@@ -14,7 +14,7 @@ const Setting = props => {
         flex: 1,
       }}>
       <ImageBackground
-        source={require('../../assets/images/1.jpg')}
+        source={require('@myapp/assets/images/1.jpg')}
         resizeMode="cover"
         style={{flex: 1}}>
         <View style={{padding: 30, marginTop: '36%'}}>
@@ -27,7 +27,7 @@ const Setting = props => {
             }}>
             <Avatar
               size={125}
-              source={require('../../assets/images/photo-placeholder.png')}
+              source={require('@myapp/assets/images/photo-placeholder.png')}
               containerStyle={{
                 borderRadius: 5,
                 borderWidth: 3,

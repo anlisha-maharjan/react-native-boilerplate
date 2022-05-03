@@ -1,11 +1,10 @@
 import React from 'react';
-import {KeyboardAvoidingView} from 'react-native';
+import {KeyboardAvoidingView, View, Text} from 'react-native';
 import {Formik, Field} from 'formik';
 import {connect} from 'react-redux';
 import * as Yup from 'yup';
-import {login} from '../../reduxs/actions';
-import {InputField, BtnSubmit} from '../../components/forms';
-import {View, Text} from 'react-native';
+import {login} from '@myapp/reduxs/actions';
+import {InputField, BtnSubmit} from '@myapp/components/forms';
 
 const Login = props => {
   const schema = Yup.object().shape({
@@ -43,7 +42,6 @@ const Login = props => {
                 component={InputField}
                 name="email"
                 label="Email"
-                keyboardType="email-address"
                 autoCapitalize="none"
               />
 

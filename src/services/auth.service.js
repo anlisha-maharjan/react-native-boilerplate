@@ -1,4 +1,4 @@
-import Request from '../interceptor/auth.interceptor';
+import Request from '@myapp/interceptor/auth.interceptor';
 
 const authService = (function () {
   function _login(username, password) {

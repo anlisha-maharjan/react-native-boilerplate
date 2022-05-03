@@ -6,8 +6,8 @@ import {
   LOGOUT_SUCCESS,
   LOGOUT_ERROR,
   RESET_AUTH,
-} from '../actions';
-import TokenService from '../../services/token.service';
+} from '@myapp/reduxs/actions';
+import TokenService from '@myapp/services/token.service';
 
 const INIT_STATE = {
   username: null,

@@ -4,9 +4,9 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import {connect} from 'react-redux';
-import Dashboard from '../pages/dashboard';
-import Setting from '../pages/setting';
-import Login from '../pages/login';
+import Dashboard from '@myapp/pages/dashboard';
+import Setting from '@myapp/pages/setting';
+import Login from '@myapp/pages/login';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();

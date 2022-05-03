@@ -1,8 +1,13 @@
 import {all, call, fork, put, takeEvery} from 'redux-saga/effects';
-import AuthService from '../../services/auth.service';
-import TokenService from '../../services/token.service';
-import {LOGIN, LOGOUT} from '../actions';
-import {loginSuccess, loginError, logoutSuccess, logoutError} from './action';
+import AuthService from '@myapp/services/auth.service';
+import TokenService from '@myapp/services/token.service';
+import {LOGIN, LOGOUT} from '@myapp/reduxs/actions';
+import {
+  loginSuccess,
+  loginError,
+  logoutSuccess,
+  logoutError,
+} from '@myapp/reduxs/auth/action';
 
 export function* watchLogin() {
   yield takeEvery(LOGIN, login);

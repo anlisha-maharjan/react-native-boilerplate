@@ -1,1 +1,1 @@
-export * from './auth/action';
+export * from '@myapp/reduxs/auth/action';
