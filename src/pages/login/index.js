@@ -15,7 +15,7 @@ const Login = props => {
   });
 
   const onLogin = values => {
-    props.login(values, props.navigation);
+    props.login(values.email, values.password, props.navigation);
   };
 
   return (
@@ -33,7 +33,10 @@ const Login = props => {
         </Text>
 
         <Formik
-          initialValues={{email: '', password: ''}}
+          initialValues={{
+            email: '',
+            password: '',
+          }}
           validationSchema={schema}
           onSubmit={onLogin}>
           {({handleSubmit}) => (
