@@ -13,13 +13,13 @@ export function* watchLogin() {
   yield takeEvery(LOGIN, login);
 }
 
-const loginAsync = async (username, password) => {
-  return AuthService.login(username, password);
+const loginAsync = async (email, password) => {
+  return AuthService.login(email, password);
 };
 
 function* login({payload}) {
   try {
-    const response = yield call(loginAsync, payload.username, payload.password);
+    const response = yield call(loginAsync, payload.email, payload.password);
     if (response.data.success) {
       TokenService.setToken(response.data.data.token);
       payload.history.navigate('Dashboard');

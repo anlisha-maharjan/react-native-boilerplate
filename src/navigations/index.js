@@ -76,7 +76,7 @@ const Navigation = props => {
         screenOptions={{
           headerShown: false,
         }}>
-        {props.token !== null ? (
+        {props.token === null || props.token?._W === null ? (
           <Stack.Screen name="Login" component={Login} />
         ) : (
           <Stack.Screen name="Root" component={Root} />

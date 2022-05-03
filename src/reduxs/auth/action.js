@@ -6,9 +6,9 @@ export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const LOGOUT_ERROR = 'LOGOUT_ERROR';
 export const RESET_AUTH = 'RESET_AUTH';
 
-export const login = (username, password, history) => ({
+export const login = (email, password, history) => ({
   type: LOGIN,
-  payload: {username, password, history},
+  payload: {email, password, history},
 });
 
 export const loginSuccess = (success, message) => ({
@@ -18,7 +18,7 @@ export const loginSuccess = (success, message) => ({
 
 export const loginError = error => ({
   type: LOGIN_ERROR,
-  payload: error,
+  payload: {error},
 });
 
 export const logout = history => ({
@@ -36,7 +36,7 @@ export const logoutSuccess = (success, message) => {
 export const logoutError = error => {
   return {
     type: LOGOUT_ERROR,
-    payload: error,
+    payload: {error},
   };
 };
 

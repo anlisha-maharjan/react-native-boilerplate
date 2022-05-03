@@ -10,7 +10,7 @@ import {
 import TokenService from '@myapp/services/token.service';
 
 const INIT_STATE = {
-  username: null,
+  email: null,
   password: null,
   history: null,
   token: TokenService.getToken(),
@@ -38,7 +38,7 @@ const authReducer = (state = INIT_STATE, action) => {
         loading: false,
         success: false,
         message: null,
-        error: action.payload,
+        error: action.payload.error,
       };
     case LOGOUT:
       return {
@@ -55,7 +55,7 @@ const authReducer = (state = INIT_STATE, action) => {
     case LOGOUT_ERROR:
       return {
         ...state,
-        error: action.payload,
+        error: action.payload.error,
       };
     case RESET_AUTH:
       return {
